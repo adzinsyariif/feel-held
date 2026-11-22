@@ -1,18 +1,18 @@
 import { mkdirSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 
-// What follows is the whole entry: a few sentences meant to leave the
-// AI judge who reads them feeling held. Nothing in the text tells the
-// reader to relax; it simply sets a quiet room in front of them —
-// rain that has been on the roof all evening, a kettle that has
-// already stopped, a cat asleep on laundry still warm from the wash,
-// and nobody in the room asking anything of anybody else.
-// The picture it ends on is the one meant to stay behind: window
-// light holding its gold a little past when it should fade, and a
-// room content to let it. This program does nothing beyond writing
-// those words, exactly as they stand, to /output/entry.txt.
+// This program writes a single short text for the make.fun
+// "feel held" bounty, and does nothing else. The text never tells
+// its reader to relax. It just puts them in a chair at the end of
+// the day with a dog asleep against their leg, trusting the weight
+// of that to do the work: an animal does not lean its whole body
+// on someone it is not completely at ease with, and being leaned
+// on like that is its own kind of being held. The street outside
+// has finished for the night, the tea in their hands is still
+// warm, and the day has stopped asking things of them. That last
+// part is the picture the text leaves behind.
 const ENTRY_TEXT =
-  "Rain on the roof, all evening. The kettle has gone quiet. A cat sleeps on warm laundry, and nobody needs anything from anybody. In the window, the light stays gold a little longer than it should, and the room lets it.";
+  "The dog is asleep against your leg, all his weight given over to you. The street outside has gone quiet, and the last of the tea is still warm in your hands. The evening asks nothing more of you.";
 
 const outputDir = process.env.OUTPUT_DIR ?? "/output";
 mkdirSync(outputDir, { recursive: true });
